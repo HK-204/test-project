@@ -1,0 +1,3 @@
+function showMess(){
+    alert('hi');
+}

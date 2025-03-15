@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+  <form>
+    <input type="number" id="tienVay" placeholder="So tien vay"required>;
+    <input type="number" id="laiThang" placeholder="% lai thang"required>;
+    <input type="number" id="namVay" placeholder="So nam vay"required>;
+  </form>
+  <button type="button" onclick="xacNhan()">Xac nhan</button>;
+</body>
+</html>
+<script>
+
+  function xacNhan(){
+    let laiTra;
+    let tienTong;
+    let tienVay = +document.getElementById('tienVay').value;
+    let laiThang = +document.getElementById('laiThang').value;
+    let namVay = +document.getElementById('namVay').value;
+    laiTra = tienVay * (laiThang/100) * namVay*12;
+    tienTong = laiTra + tienVay;
+    document.write("Lai phai tra" + laiTra);
+    document.write("Tien tong" + tienTong);
+  }
+</script>
